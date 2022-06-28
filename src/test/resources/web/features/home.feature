@@ -2,7 +2,7 @@
 Feature: Home
 
   Como usuario
-  Quiero ver en el home los nuevos ingresos
+  Quiero ver en el home los nuevos ingresos de libros
   Para realizar compras
 
   Background:
