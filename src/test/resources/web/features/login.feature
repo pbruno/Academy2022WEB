@@ -7,7 +7,7 @@ Feature: Login
   Background:
     Given El usuario se encuentra en la web Automation Practice
 
-  @TrabajoFinal
+  @TrabajoFinal @Paola
   Scenario Outline: Login fallido - Verifica Case Sensitive en Password
     When el usuario clickea el menú "My Account"
     When el usuario ingresa su username <user> y password <pass>
@@ -63,3 +63,15 @@ Feature: Login
     Examples:
       | user                  | pass        |
       | prueba@automation.com | prueba-pass |
+
+
+  @TrabajoFinal @Paola
+  Scenario Outline: Login fallido - Prueba para Ceci
+    When el usuario clickea el menú "My Account"
+    When el usuario ingresa su username <user> y password <pass>
+    And el usuario clickea el botón "Login"
+    Then se muestra mensaje de error "ERROR: "
+
+    Examples:
+      | user                  | pass                                         |
+      | PRUEBA@AUTOMATION.COM | $$$$$$$$$$$$$$!PASSW0RDSTR0NG!$$$$$$$$$$$$$$ |
