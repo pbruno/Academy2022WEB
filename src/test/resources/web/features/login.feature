@@ -70,7 +70,7 @@ Feature: Login
     When el usuario clickea el menú "My Account"
     When el usuario ingresa su username <user> y password <pass>
     And el usuario clickea el botón "Login"
-    Then se muestra mensaje de error "ERROR: The password you entered for the username <user> is incorrect. Lost your password?"
+    Then se muestra mensaje de error "ERROR: "
 
     Examples:
       | user                  | pass                                         |
